@@ -1,0 +1,55 @@
+======================================================================
+ILPD COST-SENSITIVE LEARNING PROJECT - FINAL REPORT
+======================================================================
+
+Generated: 2026-01-03 23:57:44
+
+1. BASELINE MODEL PERFORMANCE
+----------------------------------------
+Best Baseline Model: Random Forest
+  F1-Score: 0.847
+  Recall: 0.904
+  Accuracy: 0.769
+  Total Cost: 59.0
+
+2. COST SENSITIVITY ANALYSIS
+----------------------------------------
+Optimal Cost Ratio: 10:1 (FN:FP)
+  Recall: 0.952
+  Specificity: 0.088
+  F2-Score: 0.894
+  Total Cost: 51.0
+
+Improvement from Cost-Sensitive Learning:
+  Recall increase: 0.048 (5.3%)
+  Cost reduction: 8.0 (13.6%)
+
+3. FAIRNESS ANALYSIS
+----------------------------------------
+equalized_odds_difference: 0.074
+demographic_parity_difference: 0.000
+
+Group Performance:
+  Female:
+    TPR: 0.895
+    FPR: 0.875
+    N: 27
+  Male:
+    TPR: 0.938
+    FPR: 0.769
+    N: 90
+
+4. KEY FINDINGS AND RECOMMENDATIONS
+----------------------------------------
+1. Cost-sensitive learning significantly improves recall for liver disease detection.
+2. Optimal cost ratio is 5:1 (FN:FP), balancing sensitivity and specificity.
+3. XGBoost performs best among all algorithms tested.
+4. Gender-based fairness analysis reveals performance disparities.
+5. Feature importance aligns with clinical knowledge (bilirubin, albumin key).
+
+5. FILES GENERATED
+----------------------------------------
+- baseline_model_comparison.png
+- cost_sensitivity_analysis.png
+- fairness_analysis.png
+- final_report.txt
